@@ -1,1 +1,1 @@
-#This is the metropolian python course
+#This is the metropolia python cours
