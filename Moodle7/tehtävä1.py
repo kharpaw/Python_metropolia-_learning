@@ -7,13 +7,28 @@ each season to last three months, December being the first month of winter.
 
 user = int(input("Enter the month number (1-12): "))
 
-if user == 0 or user <  0:
-    print("This month doesnot exist")
+if user < 0 or user > 12:
+    print("Invalid month")
     exit()
 
-year_of_the_seasons = ("spring", "summer", "autumn", "winter")
+seasons = ("spring", "summer", "autumn", "winter")
 
-season = year_of_the_seasons[(user -1) // 3]
+months = {
+        1: 3,
+        2: 3,
+        3: 0,
+        4: 0,
+        5: 0,
+        6: 1,
+        7: 1,
+        8: 1,
+        9: 2,
+        10: 2,
+        11: 2,
+        12: 3
+}
+
+season = seasons[months[user]]
 
 print(season)
 
