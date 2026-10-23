@@ -40,22 +40,16 @@ while not race_finished:
         car.drive(1)
 
        
-        for car in cars:
-            if car.travelled_distance >= 10000:
-                race_finished = True
-                break
+    for car in cars:
+        if car.travelled_distance >= 10000:
+            race_finished = True
+            break
 
-
-       
-print(f"{'Registration':<15}{'Max speed':<15}"
-f"{'Current speed':<18}{'Distance (km)':<15}")
-
-print("-" * 63)
 
 for car in cars:
-    print(f"{car.registration_number:<15}"
-    f"{car.maximum_speed:<15}"
-    f"{car.current_speed:<18}"
-    f"{car.travelled_distance:<15.1f}")
+    print(car.registration_number, "|",
+    car.maximum_speed, "km/h |",
+    car.current_speed, "km/h |",
+    round(car.travelled_distance, 1), "km")
 
 
