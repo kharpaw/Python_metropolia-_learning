@@ -7,7 +7,6 @@ class Car:
         
     def accelerate(self, change_of_speed):
         new_speed = self.current_speed + change_of_speed
-        
         if new_speed > self.maximum_speed:
             self.current_speed = self.maximum_speed
         elif new_speed < 0:
