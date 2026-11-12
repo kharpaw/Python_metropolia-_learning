@@ -17,6 +17,7 @@ def primenumber(primenumber):
         num = int(primenumber)
         status_code = 200
         vastaus = {
+            "Number": num,
             "status":status_code,
             "is_prime": is_prime(num)
         }
